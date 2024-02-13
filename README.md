@@ -2,6 +2,7 @@
 
 A Fabric Minecraft (1.20.4*) mod for client-side chat filtering using a filter list system to remove spam in chat which is sent on third party servers.
 You can add filters with files containing regex patterns, or even implement a `ChatFilter` with your own code.
+*no guarantees thought
 
 ## Commands
 
