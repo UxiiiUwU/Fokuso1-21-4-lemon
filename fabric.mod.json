@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "fokuso",
+  "version": "${version}",
+  "name": "Fokuso",
+  "description": "A mod to reduce visual clutter on third party servers",
+  "authors": [
+    "QazCetelic"
+  ],
+  "contributors": [
+    "RazrCraft"
+  ],
+  "contact": {},
+  "license": "LGPL-3.0",
+  "icon": "assets/fokuso/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "fokuso.fokuso.client.FokusoClient"
+    ],
+    "main": [
+      "fokuso.fokuso.Fokuso"
+    ]
+  },
+  "mixins": [
+    "Fokuso.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric-api": ">=0.114.1+1.21.4",
+    "minecraft": "~1.21.4",
+    "java": ">=17"
+  }
+}
