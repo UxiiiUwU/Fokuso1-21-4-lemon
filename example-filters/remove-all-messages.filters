@@ -1,0 +1,53 @@
+# Filter Syntax Guide for Chat Filters
+# -----------------------------------
+#
+# 1. Simple Pattern Matching:
+#    - Use `.*` to match any message, e.g. `.*` will match all messages.
+#    - The `.` (dot) matches any single character, and `*` means "zero or more" occurrences of the preceding character.
+#    - Example: `.*Dan_D_Dude.*` matches any message containing "Dan_D_Dude".
+#
+# 2. Literal Text Matching:
+#    - You can match exact text in the chat by typing it directly into the filter.
+#    - Example: `.*achievement.*` matches any message containing the word "achievement".
+#
+# 3. Special Characters and Escaping:
+#    - To match special characters (like `[`, `]`, `*`, etc.), use the backslash `\` to escape them.
+#    - Example: `.*\[.*\].*` matches any message containing square brackets.
+#
+# 4. Character Classes:
+#    - You can define sets of characters to match using `[]`.
+#    - Example: `.*[Aa]ctivation.*` matches any message containing "activation" or "Activation".
+#
+# 5. Word Boundaries:
+#    - To match whole words, use `\b` for word boundaries.
+#    - Example: `\bDan_D_Dude\b` matches exactly "Dan_D_Dude" as a whole word.
+#
+# 6. Unicode Characters:
+#    - Use `\u` to match a username.
+#    - Example: `\u has made the advancement` matches messages like "Dan_D_Dude has made the advancement".
+#
+# 7. Case Sensitivity:
+#    - Regular expressions are case-sensitive by default.
+#    - To make it case-insensitive, use the `(?i)` flag at the beginning.
+#    - Example: `(?i).*dan_d_dude.*` matches "dan_d_dude" in any case (e.g., "Dan_D_Dude", "dan_d_dude", etc.).
+#
+# 8. Grouping and Capturing:
+#    - Use `()` to group parts of the pattern together and apply quantifiers to them.
+#    - Example: `(.*dan.*)` matches any message containing the word "dan".
+#
+# 9. Anchors:
+#    - Use `^` to indicate the start of the line.
+#    - Use `$` to indicate the end of the line.
+#    - Example: `^Dan_D_Dude$` matches a message where the entire line is exactly "Dan_D_Dude".
+#
+# Filter Example:
+# ----------------
+# To filter any message containing "Dan_D_Dude" anywhere in the chat:
+.*Dan_D_Dude.*
+#
+# To filter messages about a player making an advancement (e.g., "Dan_D_Dude has made the advancement"):
+\u has made the advancement \[.*?\]
+#
+# To filter all chat messages (remove all):
+# Remove the # from message bellow, save it and reload using /chatfilters reload
+# .*
