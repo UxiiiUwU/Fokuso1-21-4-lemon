@@ -1,3 +1,4 @@
+# In order to make the filter from this list work, remove the '#' from its corresponding line
 # Filter Syntax Guide for Chat Filters
 # -----------------------------------
 #
@@ -43,11 +44,10 @@
 # Filter Example:
 # ----------------
 # To filter any message containing "Dan_D_Dude" anywhere in the chat:
-.*Dan_D_Dude.*
+# .*Dan_D_Dude.*
 #
 # To filter messages about a player making an advancement (e.g., "Dan_D_Dude has made the advancement"):
-\u has made the advancement \[.*?\]
+# \u has made the advancement \[.*?\]
 #
 # To filter all chat messages (remove all):
-# Remove the # from message bellow, save it and reload using /chatfilters reload
 # .*
